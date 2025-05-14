@@ -2,6 +2,7 @@
 SELECT b.booking_id, b.start_date, b.end_date, u.user_id, u.first_name, u.last_name
 FROM Booking b
 INNER JOIN User u ON b.user_id = u.user_id;
+ORDER BY b.start_date;
 
 -- LEFT JOIN: All properties and their reviews (include properties with no reviews)
 SELECT p.property_id, p.name, r.review_id, r.rating, r.comment

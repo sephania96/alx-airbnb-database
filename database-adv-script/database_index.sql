@@ -11,3 +11,7 @@ CREATE INDEX idx_booking_start_date ON Booking(start_date);
 
 -- Property Table Index
 CREATE INDEX idx_property_host ON Property(host_id);
+
+-- Sample EXPLAIN ANALYZE usage for performance verification
+EXPLAIN ANALYZE SELECT * FROM Booking WHERE user_id = 'uuid';
+EXPLAIN ANALYZE SELECT * FROM Property WHERE host_id = 'uuid';
